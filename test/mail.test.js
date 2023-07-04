@@ -1,12 +1,7 @@
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
-const sinon = require('sinon');
 const axios = require('axios');
 const AxiosMockAdapter = require('axios-mock-adapter');
 const Mail = require('../mail');
 require('dotenv').config();
-chai.use(chaiAsPromised);
-const { expect } = chai;
 
 const {USER, API_KEY, FROM, TO} = process.env
 
