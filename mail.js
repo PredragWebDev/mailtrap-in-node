@@ -7,7 +7,7 @@ class Mail {
     // this.user
     this.transport = nodemailer.createTransport({
         // host: "sandbox.smtp.mailtrap.io",
-        host: "https://api.mailtrap.io/v1/inbox/2302991/messages",
+        host: "https://api.mailtrap.io/v1",
         port: 2525,
         auth: {
             user: "5e6c4dbede19bf",
