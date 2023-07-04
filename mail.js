@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-require('dotenv').config();
 
 class Mail {
   constructor(user, apiKey) {
@@ -16,7 +15,7 @@ class Mail {
   }
 
   async send(sender, recipient, subject, text, html, attachments) {
-    //  Prepare attachments if any
+
     let preparedAttachments = [];
 
     if (attachments) {
