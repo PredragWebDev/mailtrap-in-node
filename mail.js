@@ -6,8 +6,8 @@ class Mail {
     this.apiKey = apiKey;
     // this.user
     this.transport = nodemailer.createTransport({
-        // host: "sandbox.smtp.mailtrap.io",
-        host: "https://api.mailtrap.io/v1",
+        host: "sandbox.smtp.mailtrap.io",
+        // host: "https://api.mailtrap.io/v1",
         port: 2525,
         auth: {
             user: "5e6c4dbede19bf",

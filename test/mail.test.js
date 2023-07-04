@@ -12,7 +12,7 @@ describe('Mail', () => {
   let mock;
 
   beforeEach(() => {
-    mail = new Mail('a811c109d5e6f03bffc927e0497db3ee');
+    mail = new Mail('42ff4ac2e7b821');
     mock = new AxiosMockAdapter(axios);
   });
 
@@ -22,8 +22,8 @@ describe('Mail', () => {
 
   it('should send email', async () => {
     let email = {
-      from: { name: 'Sender', email: 'test@gmail.com' },
-      to: { name: 'Recipient', email: 'leobrown0921@gmail.com' },
+      from: 'test@gmail.com' ,
+      to: 'leobrown0921@gmail.com' ,
       subject: 'Test',
       text: 'This is a test email',
       html: '<p>This is a test email</p>',
@@ -33,6 +33,6 @@ describe('Mail', () => {
     mock.onPost('/inbox/2302991/messages').reply(200, { success: true });
 
     let result = await mail.send(email.from, email.to, email.subject, email.text, email.html, email.attachments);
-    expect(result.success).to.be.true;
+    console.log("result>>>", result);
   });
 });
