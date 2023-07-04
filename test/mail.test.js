@@ -14,7 +14,7 @@ describe('Mail', () => {
   let mock;
 
   beforeEach(() => {
-    mail = new Mail(API_KEY);
+    mail = new Mail(process.env.API_KEY);
     mock = new AxiosMockAdapter(axios);
   });
 
