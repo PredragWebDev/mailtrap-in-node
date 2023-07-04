@@ -27,6 +27,7 @@ class Mail {
       });
     }
     
+    
     // Prepare the email
     let email = {
         from: sender,
