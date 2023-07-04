@@ -8,7 +8,7 @@ class Mail {
         host: "sandbox.smtp.mailtrap.io",
         port: 2525,
         auth: {
-            user: "5e6c4dbede19bf",
+            user: process.env.USER,
             pass: this.apiKey
         }
     });
