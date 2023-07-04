@@ -1,16 +1,15 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-const {USER} = process.env
-
 class Mail {
-  constructor(apiKey) {
+  constructor(user, apiKey) {
     this.apiKey = apiKey;
+    this.user = user
     this.transport = nodemailer.createTransport({
         host: "sandbox.smtp.mailtrap.io",
         port: 2525,
         auth: {
-            user: USER,
+            user: this.user,
             pass: this.apiKey
         }
     });

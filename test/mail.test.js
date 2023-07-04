@@ -4,17 +4,18 @@ const sinon = require('sinon');
 const axios = require('axios');
 const AxiosMockAdapter = require('axios-mock-adapter');
 const Mail = require('../mail');
+require('dotenv').config();
 chai.use(chaiAsPromised);
 const { expect } = chai;
 
-const {API_KEY, FROM, TO} = process.env
+const {USER, API_KEY, FROM, TO} = process.env
 
 describe('Mail', () => {
   let mail;
   let mock;
 
   beforeEach(() => {
-    mail = new Mail(API_KEY);
+    mail = new Mail(USER, API_KEY);
     mock = new AxiosMockAdapter(axios);
   });
 
