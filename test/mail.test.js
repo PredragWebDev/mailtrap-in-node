@@ -7,14 +7,14 @@ const Mail = require('../mail');
 chai.use(chaiAsPromised);
 const { expect } = chai;
 
-
+const {API_KEY, FROM, TO} = process.env
 
 describe('Mail', () => {
   let mail;
   let mock;
 
   beforeEach(() => {
-    mail = new Mail(process.env.API_KEY);
+    mail = new Mail(API_KEY);
     mock = new AxiosMockAdapter(axios);
   });
 
@@ -24,8 +24,8 @@ describe('Mail', () => {
 
   it('should send email', async () => {
     let email = {
-      from: process.env.FROM ,
-      to: process.env.TO ,
+      from: FROM ,
+      to: TO ,
       subject: 'Test',
       text: 'This is a test email',
       html: '<p>This is a test email</p>',

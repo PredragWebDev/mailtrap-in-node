@@ -2,6 +2,8 @@ const axios = require('axios');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+const {USER} = process.env
+
 class Mail {
   constructor(apiKey) {
     this.apiKey = apiKey;
