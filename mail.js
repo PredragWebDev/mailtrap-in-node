@@ -29,7 +29,6 @@ class Mail {
         });
       });
     }
-
     
     // Prepare the email
     let email = {
