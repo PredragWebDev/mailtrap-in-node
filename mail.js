@@ -14,7 +14,6 @@ class Mail {
             pass: this.apiKey
         }
     });
-
   }
 
   async send(sender, recipient, subject, text, html, attachments) {
