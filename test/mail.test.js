@@ -7,6 +7,8 @@ const Mail = require('../mail');
 chai.use(chaiAsPromised);
 const { expect } = chai;
 
+
+
 describe('Mail', () => {
   let mail;
   let mock;

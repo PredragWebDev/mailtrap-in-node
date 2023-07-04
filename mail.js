@@ -1,5 +1,6 @@
 const axios = require('axios');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 class Mail {
   constructor(apiKey) {
