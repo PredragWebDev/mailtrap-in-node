@@ -1,4 +1,3 @@
-const axios = require('axios');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
@@ -11,7 +10,7 @@ class Mail {
         host: "sandbox.smtp.mailtrap.io",
         port: 2525,
         auth: {
-            user: process.env.USER,
+            user: USER,
             pass: this.apiKey
         }
     });
